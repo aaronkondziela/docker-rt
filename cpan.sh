@@ -61,3 +61,9 @@ cpanm Time::ParseDate
 cpanm Tree::Simple
 cpanm UNIVERSAL::require
 cpanm XML::RSS
+cpanm CSS::Minifier::XS
+cpanm JavaScript::Minifier::XS
+cpanm Business::Hours
+cpanm Data::Page::Pageset
+cpanm Scope::Upper
+cpanm Net::IP
