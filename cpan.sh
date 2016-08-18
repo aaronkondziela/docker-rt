@@ -36,6 +36,7 @@ cpanm IPC::Run3
 cpanm JSON
 cpanm Locale::Maketext::Fuzzy
 cpanm Locale::Maketext::Lexicon
+cpanm Test::Needs~"< 0.002003"
 cpanm Log::Dispatch
 cpanm MIME::Entity
 cpanm MIME::Types
@@ -51,7 +52,6 @@ cpanm Regexp::Common
 cpanm Regexp::Common::net::CIDR
 cpanm Regexp::IPv6
 cpanm Role::Basic
-cpanm SOME
 cpanm Symbol::Global::Name
 cpanm Text::Password::Pronounceable
 cpanm Text::Quoted
