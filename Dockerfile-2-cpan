@@ -1,0 +1,5 @@
+FROM docker-rt-base
+COPY cpan.sh /cpan.sh
+RUN bash /cpan.sh
+
+CMD bash

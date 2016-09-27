@@ -21,21 +21,26 @@ cpanm DateTime::Locale
 cpanm Devel::StackTrace
 cpanm Email::Address
 cpanm Email::Address::List
+cpanm Encode::Detect::Detector
+cpanm Encode::HanExtra
 cpanm FCGI::ProcManager
 cpanm File::ShareDir
 cpanm File::Which
 cpanm GnuPG::Interface
+cpanm HTML::FormatExternal
 cpanm HTML::FormatText::WithLinks
 cpanm HTML::FormatText::WithLinks::AndTables
+cpanm HTML::Gumbo
 cpanm HTML::Mason
 cpanm HTML::Mason::PSGIHandler
 cpanm HTML::Quoted
 cpanm HTML::RewriteAttributes
 cpanm HTML::Scrubber
-cpanm IPC::Run3
+cpanm IPC::Run
 cpanm JSON
 cpanm Locale::Maketext::Fuzzy
 cpanm Locale::Maketext::Lexicon
+cpanm Locale::PO
 cpanm Test::Needs~"< 0.002003"
 cpanm Log::Dispatch
 cpanm MIME::Entity
@@ -67,3 +72,18 @@ cpanm Business::Hours
 cpanm Data::Page::Pageset
 cpanm Scope::Upper
 cpanm Net::IP
+
+cpanm Log::Dispatch::Perl
+cpanm Test::Email
+cpanm Test::WWW::Mechanize
+cpanm Set::Tiny
+cpanm GD
+cpanm GraphViz
+cpanm Plack::Middleware::Test::StashWarnings
+cpanm Email::Abstract
+cpanm Test::Pod
+cpanm Mojo::DOM
+cpanm XML::Simple
+cpanm Test::Expect
+cpanm Test::WWW::Mechanize::PSGI
+
