@@ -49,6 +49,8 @@ cpanm Module::Refresh
 cpanm Module::Versions::Report
 cpanm Mozilla::CA
 cpanm Net::CIDR
+cpanm Net::LDAP
+cpanm Net::LDAP::Server::Test
 cpanm Net::SSL
 cpanm PerlIO::eol
 cpanm Plack
