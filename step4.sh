@@ -10,4 +10,4 @@ if [ "$IMAGE" == "" ] ; then echo "Using default image name docker-rt:latest" ; 
 
 echo "Go run /opt/docker-rt/setup.sh and use thisisatest when prompted to set passwords."
 echo "If all is well, rt should be available at localhost:80 on the host system."
-docker run -it -p 80:80 $RM -v /opt/rt-src:/opt/rt-src "$IMAGE" bash
+docker run -it -p 80:80 $RM -v /opt/rt-src:/opt/rt-src -v /opt/rt-cx:/opt/rt-cx "$IMAGE" bash

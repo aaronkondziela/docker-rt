@@ -89,3 +89,6 @@ cpanm XML::Simple
 cpanm Test::Expect
 cpanm Test::WWW::Mechanize::PSGI
 
+# For extension development
+cpanm Module::Install::RTx
+cpanm Dist::Zilla::MintingProfile::RTx
