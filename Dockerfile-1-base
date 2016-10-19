@@ -1,6 +1,6 @@
 FROM ubuntu
 RUN apt-get update
-RUN apt-get -y install build-essential perl git cpanminus perlbrew apache2 libapache2-mod-perl2 vim autoconf libexpat1-dev libssl-dev graphviz net-tools libgd3
+RUN apt-get -y install build-essential perl git cpanminus perlbrew apache2 libapache2-mod-perl2 vim autoconf libexpat1-dev libssl-dev graphviz net-tools libgd-dev
 RUN apt-get -y install mariadb-server-10.0 mariadb-client-10.0
 
 CMD bash
