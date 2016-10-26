@@ -1,5 +1,6 @@
 #!/bin/bash
 pushd /opt/docker-rt
+cp tailer.sh /usr/bin
 mysql_install_db
 mysqld_safe &
 mysql_secure_installation
