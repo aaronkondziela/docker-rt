@@ -1,8 +1,19 @@
 #!/usr/bin/env bash
-read -p "Use --rm flag to create ephemeral container? [Y/n] " YN
-RM="--rm"
+BRANCH=`cat /opt/rt-src/rt/.git/HEAD`
+read -p "Current RT branch is $BRANCH - is this the version you want? [Y/n] " YNB
+case "$YNB" in
+	[Nn]* ) echo "Exiting, go pick the right branch!" ; exit ;;
+esac
+
+read -p "Did you remember to run git clean -x -f ? [Y/n] " YNB
+case "$YNB" in
+	[Nn]* ) echo "Exiting, go clean it up!" ; exit ;;
+esac
+
+read -p "Use --rm flag to create ephemeral container? [y/N] " YN
+RM=""
 case "$YN" in
-	[Nn]* ) RM="" ;;
+	[Yy]* ) RM="--rm" ;;
 esac
 
 read -p "What image name should we run? [docker-rt:latest]: " IMAGE
