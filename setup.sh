@@ -18,4 +18,5 @@ cp 000-default.conf /etc/apache2/sites-available/
 cp -f ports.conf /etc/apache2/ports.conf
 apache2ctl start
 popd
+echo "Go run dzil setup if you are doing extensions"
 

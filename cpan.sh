@@ -80,6 +80,8 @@ cpanm Test::Email
 cpanm Test::WWW::Mechanize
 cpanm Set::Tiny
 cpanm GD
+cpanm GD::Graph
+cpanm GD::Text
 cpanm GraphViz
 cpanm Plack::Middleware::Test::StashWarnings
 cpanm Email::Abstract
