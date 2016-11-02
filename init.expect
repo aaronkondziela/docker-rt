@@ -1,0 +1,22 @@
+#!/usr/bin/env expect
+set timeout 60
+spawn ./setup.sh
+expect "Enter current password for root (enter for none): "
+send "\r"
+expect "Set root password? \[Y/n\] "
+send "\r"
+expect "New password: "
+send "thisisatest\r"
+expect "Re-enter new password: "
+send "thisisatest\r"
+expect "Remove anonymous users? \[Y/n\] "
+send "\r"
+expect "Disallow root login remotely? \[Y/n\] "
+send "\r"
+expect "Remove test database and access to it? \[Y/n\] "
+send "\r"
+expect "Reload privilege tables now? \[Y/n\] "
+send "\r"
+expect "\nPassword: "
+send "thisisatest\r"
+expect "Done."

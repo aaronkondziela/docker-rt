@@ -1,6 +1,6 @@
 FROM docker-rt-cpan
 RUN mkdir /opt/rt-src/ /opt/rt4/ /opt/docker-rt/
 # TODO maybe mount into instead of copy... meh
-COPY tailer.sh passwd.sql RT_SiteConfig.pm 000-default.conf ports.conf setup.sh runtests.sh poke-rt.sh clean-rt.sh /opt/docker-rt/
+COPY tailer.sh passwd.sql RT_SiteConfig.pm 000-default.conf ports.conf setup.sh runtests.sh poke-rt.sh clean-rt.sh init.expect /opt/docker-rt/
 
 CMD bash
