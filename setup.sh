@@ -15,11 +15,15 @@ make testdeps
 make install
 make initialize-database
 popd 
+echo "running passwd.sql"
 mysql < passwd.sql
+echo "copying conf files into place"
 cp RT_SiteConfig.pm /opt/rt4/etc/
 cp 000-default.conf /etc/apache2/sites-available/
 cp -f ports.conf /etc/apache2/ports.conf
+echo "starting apache"
 apache2ctl start
 popd
 echo "Go run dzil setup if you are doing extensions"
+echo "docker-rt setup complete."
 
