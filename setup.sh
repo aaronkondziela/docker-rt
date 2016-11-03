@@ -3,6 +3,9 @@ pushd /opt/docker-rt
 cp tailer.sh /usr/bin
 mysql_install_db
 mysqld_safe &
+echo "Sleeping for 3 seconds to let mysql come up..."
+sleep 3
+echo "Continuing."
 mysql_secure_installation
 pushd /opt/rt-src/rt
 autoconf
