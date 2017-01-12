@@ -1,5 +1,7 @@
 #!/bin/bash
 pushd /opt/docker-rt
+cp .bash_aliases /root
+cp .ghetto_init /root
 cp tailer.sh /usr/bin
 mysql_install_db
 mysqld_safe &

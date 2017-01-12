@@ -1,0 +1,30 @@
+# Ghetto Init
+# Because hooking bashrc to init is delightfully obscene B)
+
+echo Ghetto Init started.
+
+echo -n Ghetto Init: mysqld_safe
+ps aux | grep mysqld | grep -qv grep
+if [ $? ] ; then
+	echo -e "\tstarting"
+	mysqld_safe &
+else
+	echo -e "\talready running"
+fi
+
+sleep 2
+
+echo -n Ghetto Init: apache2
+ps aux | grep apache2 | grep -qv grep
+if [ $? ] ; then
+	echo -e "\tstarting"
+	apache2ctl start
+else
+	echo -e "\talready running"
+fi
+
+sleep 2
+
+cd /opt/rt-src/rt
+
+echo Ghetto Init finished.
