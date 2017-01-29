@@ -25,6 +25,10 @@ fi
 
 sleep 2
 
+echo -n Ghetto Init: env vars
+export RT_DBA_USER=root
+export RT_DBA_PASSWORD=thisisatest
+
 cd /opt/rt-src/rt
 
 echo Ghetto Init finished.
