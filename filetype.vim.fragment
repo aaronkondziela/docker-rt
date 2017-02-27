@@ -1,0 +1,31 @@
+" The below changes configure vim to recognize RT's .html temlplate files as
+" mason templates. Maybe there's a nice clean way to do this in my ~ but I
+" am busy and IDGAF. Deal with it. B)
+
+" HTML (.shtml and .stm for server side)
+au BufNewFile,BufRead *.html,*.htm,*.shtml,*.stm  call s:FThtml()
+
+" Distinguish between HTML, XHTML and Django
+func! s:FThtml()
+  let n = 1
+  while n < 10 && n < line("$")
+    if getline(n) =~ '\<DTD\s\+XHTML\s'
+      setf xhtml
+      return
+    endif
+    if getline(n) =~ '{%\s*\(extends\|block\|load\)\>\|{#\s\+'
+      setf htmldjango
+      return
+    endif
+" --- start hacked bit
+    if getline(n) =~ '^\(%#\|% #\|<&\)'
+      setf mason
+      return
+    endif
+" --- end hacked bit
+    let n = n + 1
+  endwhile
+  setf html 
+endfunc
+
+
