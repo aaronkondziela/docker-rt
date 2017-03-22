@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
 function just_run_it {
+	echo "(If you just created this image, you can hit enter here)"
 	read -p "What image name should we run? [${NAME}:latest]: " IMAGE
 	if [ "$IMAGE" == "" ] ; then echo "Using default image name ${NAME}:latest" ; IMAGE="$NAME" ; fi
 
-	echo "Go run /opt/docker-rt/init.expect"
+	echo -e "\n\nWhen done, go into /opt/docker-rt/ and run init.expect"
 	echo "   use thisisatest if prompted to set passwords."
-	echo "If all is well, rt should be available at localhost:80 on the host system."
+	echo -e "If all is well, rt should be available at localhost:80 on the host system.\n\n"
 	docker run -it -p 80:80 $RM -v /opt/rt-src:/opt/rt-src -v /opt/rt-cx:/opt/rt-cx "$IMAGE" bash
 }
 
