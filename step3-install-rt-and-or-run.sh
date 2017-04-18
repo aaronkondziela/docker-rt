@@ -37,7 +37,7 @@ case "$YN" in
 	[Yy]* ) RM="--rm" ;;
 esac
 
-read -p "Image name to build [docker-rt]: " NAME
+read -p "Name the image we are about to create [docker-rt]: " NAME
 if [ "$NAME" == "" ] ; then echo "Using default of docker-rt" ; NAME="docker-rt" ; fi
 echo "Building dockerfile 3"
 docker build -f Dockerfile-3-rtsetup -t "$NAME" .
