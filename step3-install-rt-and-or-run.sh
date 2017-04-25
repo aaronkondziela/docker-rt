@@ -20,7 +20,9 @@ case "$YNB" in
 	[Yy]* ) echo "Ok..." ; NAME='docker-rt' ; just_run_it ; exit ;;
 esac
 
-BRANCH=`cat /opt/rt-src/rt/.git/HEAD`
+pushd /opt/rt-src/rt >/dev/null
+BRANCH=`git branch --points-at HEAD | grep -F '*' | sed 's/\* (\(.*\))/\1/' | sed 's/HEAD detached at/tag/'`
+popd >/dev/null
 read -p "Current RT branch is $BRANCH - is this the version you want? [Y/n] " YNB
 case "$YNB" in
 	[Nn]* ) echo "Exiting, go pick the right branch!" ; exit ;;
