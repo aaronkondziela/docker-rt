@@ -7,6 +7,7 @@ function just_run_it {
 
 	echo -e "\n\nWhen done, go into /opt/docker-rt/ and run init.expect"
 	echo "   use thisisatest if prompted to set passwords."
+	echo "Remember to use script -qc bash for exec -it commands because of the TTY problem"
 	echo -e "If all is well, rt should be available at localhost:80 on the host system.\n\n"
 	docker run -it -p 80:80 $RM -v /opt/rt-src:/opt/rt-src -v /opt/rt-cx:/opt/rt-cx "$IMAGE" bash
 }
